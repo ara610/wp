@@ -7,6 +7,7 @@ const TitanicService = require(`${path}/service/titanic.service`);
 
 router.get('/api/titanic', async (req, res, next) => {
     let titanicService = new TitanicService();
+    console.log("_self:", req._self);
     let data = await titanicService.getAllTitanic();
 
     res.status(200).json({
